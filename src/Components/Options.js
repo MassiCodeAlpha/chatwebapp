@@ -56,13 +56,16 @@ const Options = ({ children }) => {
                 onChange={(e) => setName(e.target.value)}
                 fullWidth
               />
-              <CopyToClipboard className={classes.margin} text={me}>
+              {console.log(me)}
+              <CopyToClipboard text={me} className={classes.margin}>
                 <Button
                   variant="contained"
-                  fullWidth
-                  startIcon={<Assignment size="large" />}
                   color="primary"
-                ></Button>
+                  fullWidth
+                  startIcon={<Assignment fontSize="large" />}
+                >
+                  Copy Your ID
+                </Button>
               </CopyToClipboard>
             </Grid>
             <Grid item xs={12} md={6} className={classes.padding}>
